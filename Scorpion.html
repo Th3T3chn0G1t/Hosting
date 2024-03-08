@@ -46,20 +46,22 @@ tw-link.visited { color: orange; }
 	display: flex;
  	flex-direction: column;
 	width: 10%;	
+  	image-rendering: pixelated;
 }
 
 .bgimg {
 	width: 100%;
 	border-radius: 4px;
+  	image-rendering: pixelated;
 }
 
-.coreText { color: red; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="OpRoom" color="blue"></tw-tag><tw-tag name="Hallway" color="red"></tw-tag><tw-tag name="BreakRoom" color="green"></tw-tag><tw-tag name="LabB" color="purple"></tw-tag><tw-tag name="LabA" color="purple"></tw-tag><tw-tag name="Office" color="orange"></tw-tag><tw-tag name="Meta" color="purple"></tw-tag><tw-tag name="Closet" color="yellow"></tw-tag><tw-passagedata pid="1" name="OpRoom" tags="OpRoom" position="1700,850" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoomRender.png&quot;&gt;
+.coreText { color: red; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="OpRoom" color="blue"></tw-tag><tw-tag name="Hallway" color="red"></tw-tag><tw-tag name="BreakRoom" color="green"></tw-tag><tw-tag name="LabB" color="purple"></tw-tag><tw-tag name="LabA" color="purple"></tw-tag><tw-tag name="Office" color="orange"></tw-tag><tw-tag name="Meta" color="purple"></tw-tag><tw-tag name="Closet" color="yellow"></tw-tag><tw-passagedata pid="1" name="OpRoom" tags="OpRoom" position="1700,850" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoom.png&quot;&gt;
 
 &lt;tt&gt;You&#39;re standing in a steel operation room.&lt;/tt&gt;
 
 (if: $took_op is not true) [[[Look around-&gt;OpRoomExamine]]]
 [[Leave to hallway-&gt;OpRoomDoor]]
-[[Examine the terminal-&gt;OpRoomTerm]]</tw-passagedata><tw-passagedata pid="2" name="OpRoomExamine" tags="OpRoom" position="1700,700" size="100,100">&lt;img class=&quot;bgimg&quot;  src=&quot;../ScorpionRenders/SurfaceRenderItems.png&quot;&gt;
+[[Examine the terminal-&gt;OpRoomTerm]]</tw-passagedata><tw-passagedata pid="2" name="OpRoomExamine" tags="OpRoom" position="1700,700" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoomTable.png&quot;&gt;
 
 There is a work surface with a few items strewn across it.
 
@@ -67,26 +69,32 @@ There is a work surface with a few items strewn across it.
 
 (set: $have_keycard to true)
 (set: $took_op to true)
-</tw-passagedata><tw-passagedata pid="3" name="OpRoomTake" tags="OpRoom" position="1550,700" size="100,100">&lt;img class=&quot;bgimg&quot;  src=&quot;../ScorpionRenders/SurfaceRender.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="OpRoomTake" tags="OpRoom" position="1550,700" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoomTableEmpty.png&quot;&gt;
 
 You take a keycard.
 
 [[Return to room-&gt;OpRoom]]
-</tw-passagedata><tw-passagedata pid="4" name="OpRoomDoor" tags="OpRoom" position="1700,1000" size="100,100">It&#39;s a metallic door with a keycard reader.
+</tw-passagedata><tw-passagedata pid="4" name="OpRoomDoor" tags="OpRoom" position="1700,1000" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoomDoor.png&quot;&gt;
+
+It&#39;s a metallic door with a keycard reader.
 
 (if: $op_door_opened is true) [[[Go to hallway-&gt;MidHall]]]
 (else:) [It is locked]
 
 [[Return to room-&gt;OpRoom]]
 
-(if: $have_keycard is true and $op_door_opened is not true) [[[Use keycard to leave-&gt;MidHall]]]</tw-passagedata><tw-passagedata pid="5" name="OpRoomTerm" tags="OpRoom" position="1850,700" size="100,100">It&#39;s a computer terminal with an excerpt from some doctor&#39;s notes open.
+(if: $have_keycard is true and $op_door_opened is not true) [[[Use keycard to leave-&gt;MidHall]]]</tw-passagedata><tw-passagedata pid="5" name="OpRoomTerm" tags="OpRoom" position="1850,700" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/OpRoomTerm.png&quot;&gt;
+
+It&#39;s a computer terminal with an excerpt from some doctor&#39;s notes open.
 
 [[Return to room-&gt;OpRoom]]
 
 &lt;code&gt;
 They&#39;ve brought in a new subject - hopefully the last. We&#39;ve refined our methods to the point that degeneration should be out of the question.
 &lt;/code&gt;
-</tw-passagedata><tw-passagedata pid="6" name="MidHall" tags="Hallway" position="2200,1000" size="100,100">You&#39;re in a grimy, tiled corridor with buzzing fluorescent lights. There are doors with labels affixed to them. You can see more further down the hallway.
+</tw-passagedata><tw-passagedata pid="6" name="MidHall" tags="Hallway" position="2200,1000" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/HallMid.png&quot;&gt;
+
+You&#39;re in a grimy, tiled corridor with buzzing fluorescent lights. There are doors with labels affixed to them. You can see more further down the hallway.
 
 [[Enter Operation Room-&gt;OpRoom]]
 [[Enter Lab B-&gt;LabB]]
@@ -111,25 +119,33 @@ They&#39;ve brought in a new subject - hopefully the last. We&#39;ve refined our
 
 (if: $took_keys is not true) [[[Check the cabinet-&gt;LabBCabinet]]]
 (if: $have_bleach is true and $have_ammonia is true and $have_mask is true) [[[Use the bleach and ammonia on the meat-&gt;LabBMeat]]] (else-if: $took_keycard_2 is not true) [The meat is pulsing]
-[[Return to the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="9" name="BreakRoom" tags="BreakRoom" position="2850,1350" size="100,100">You&#39;re in a small kitchen and rest area. There is a vending machine in the corner.
+[[Return to the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="9" name="BreakRoom" tags="BreakRoom" position="2850,1350" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Breakroom.png&quot;&gt;
+
+You&#39;re in a small kitchen and rest area. There is a vending machine in the corner.
 
 (if: $took_janitor_keys is not true) [[[Check the table-&gt;BreakRoomTableExamine]]]
 [[Check the fridge-&gt;BreakRoomFridgeExamine]]
 [[Check the vending machine-&gt;BreakRoomVendingExamine]]
 
 [[Return to the hallway-&gt;MidHall]]
-</tw-passagedata><tw-passagedata pid="10" name="LowHall" tags="Hallway" position="2200,850" size="100,100">You&#39;re at the end of the hallway.
+</tw-passagedata><tw-passagedata pid="10" name="LowHall" tags="Hallway" position="2200,850" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/HallLow.png&quot;&gt;
+
+You&#39;re at the end of the hallway.
 
 [[Enter Lab A-&gt;LabA]]
 [[Enter Office-&gt;OfficeDoor]]
 
-[[Move right through the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="11" name="HighHall" tags="Hallway" position="2200,1150" size="100,100">You&#39;re in front of the exit door, it&#39;s chained up. There are two more doors on either side.
+[[Move right through the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="11" name="HighHall" tags="Hallway" position="2200,1150" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/HallHigh.png&quot;&gt;
+
+You&#39;re in front of the exit door, it&#39;s chained up. There are two more doors on either side.
 
 [[Examine Exit Door-&gt;FakeExitDoor]]
 [[Enter Lab C-&gt;LabCDoor]]
 [[Enter Broom Closet-&gt;Closet]]
 
-[[Move left through the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="12" name="LabA" tags="LabA" position="2350,650" size="100,100">There&#39;s a strange, flesh-like sculpture in the middle of the room, and a terminal in the corner.
+[[Move left through the hallway-&gt;MidHall]]</tw-passagedata><tw-passagedata pid="12" name="LabA" tags="LabA" position="2350,650" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/LabA.png&quot;&gt;
+
+There&#39;s a strange, flesh-like sculpture in the middle of the room, and a terminal in the corner.
 
 [[Examine the terminal-&gt;LabATerm]]
 [[Examine the sculpture-&gt;LabAArtefact]]
@@ -160,13 +176,15 @@ setInterval(() =&gt; {
 		el.innerHTML = c + o + r + e
 	}
 }, 50)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="Closet" tags="Closet" position="2550,1650" size="100,100">You&#39;re in a broom closet. There&#39;s a chemical box. (if: $took_gas_mask is not true) [There&#39;s a gas mask hung on the wall]
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="Closet" tags="Closet" position="2550,1650" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Closet.png&quot;&gt;
+
+You&#39;re in a broom closet. There&#39;s a chemical box. (if: $took_gas_mask is not true) [There&#39;s a gas mask hung on the wall]
 
 (if: $have_janitor_keys is true) [[[Unlock the box-&gt;ClosetChemBox]]] (else-if: $have_bleach is not true) [The box is locked]
 (if: $took_gas_mask is not true) [[[Take the mask-&gt;ClosetMaskTake]]]
 [[Return to the hallway-&gt;HighHall]]</tw-passagedata><tw-passagedata pid="16" name="Inventory" tags="header Meta" position="1300,700" size="100,100">&lt;div class=&quot;inv&quot;&gt;
 (if: $have_keycard is true) [
-	&lt;div class=&quot;invitem&quot;&gt;Keycard&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/keycard.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;invitem&quot;&gt;Keycard&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Keycard.png&quot;&gt;&lt;/div&gt;
 ]
 
 (if: $have_keys is true) [
@@ -174,7 +192,7 @@ setInterval(() =&gt; {
 ]
 
 (if: $have_janitor_keys is true) [
-	&lt;div class=&quot;invitem&quot;&gt;Janitor Keys&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/keycard.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;invitem&quot;&gt;Janitor Keys&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Key.png&quot;&gt;&lt;/div&gt;
 ]
 
 (if: $have_ammonia is true) [
@@ -182,37 +200,45 @@ setInterval(() =&gt; {
 ]
 
 (if: $have_mask is true) [
-	&lt;div class=&quot;invitem&quot;&gt;Gas Mask&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/keycard.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;invitem&quot;&gt;Mask&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Mask.png&quot;&gt;&lt;/div&gt;
 ]
 
 (if: $have_bleach is true) [
-	&lt;div class=&quot;invitem&quot;&gt;Bleach&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/keycard.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;invitem&quot;&gt;Bleach&lt;img width=&quot;50px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Blech.png&quot;&gt;&lt;/div&gt;
 ]
 
 (if: $have_keycard_2 is true) [
-	&lt;div class=&quot;invitem&quot;&gt;Lab C Keycard&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/keycard.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;invitem&quot;&gt;Keycard&lt;img width=&quot;100px&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Keycard2.png&quot;&gt;&lt;/div&gt;
 ]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="BreakRoomTableExamine" tags="BreakRoom" position="2850,1200" size="100,100">The table has a set of keys on it.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="BreakRoomTableExamine" tags="BreakRoom" position="2850,1200" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/TableKeys.png&quot;&gt;
+
+The table has a set of keys on it.
 
 [[Take the keys-&gt;BreakRoomTableTake]]
 
 (set: $have_janitor_keys to true)
 (set: $took_janitor_keys to true)
-</tw-passagedata><tw-passagedata pid="18" name="BreakRoomFridgeExamine" tags="BreakRoom" position="3000,1500" size="100,100">It&#39;s a fridge with a note tacked to the front.
+</tw-passagedata><tw-passagedata pid="18" name="BreakRoomFridgeExamine" tags="BreakRoom" position="3000,1500" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Fridge.png&quot;&gt;
+
+It&#39;s a fridge with a note tacked to the front.
 
 [[Check inside-&gt;BreakRoomFridgeInside]]
 [[Read the note-&gt;BreakRoomFridgeNote]]
 
 [[Return to room-&gt;BreakRoom]]
-</tw-passagedata><tw-passagedata pid="19" name="BreakRoomVendingExamine" tags="BreakRoom" position="2700,1350" size="100,100">It&#39;s a vending machine with a few items inside. It appears to be turned off.
+</tw-passagedata><tw-passagedata pid="19" name="BreakRoomVendingExamine" tags="BreakRoom" position="2700,1350" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Vending.png&quot;&gt;
 
-&lt;b&gt;Temporary:&lt;/b&gt; Karamel Krunch bars are listed as &lt;em&gt;&lt;b&gt;A96&lt;/b&gt;&lt;/em&gt;
-
-[[Return to room-&gt;BreakRoom]]
-</tw-passagedata><tw-passagedata pid="20" name="BreakRoomFridgeInside" tags="BreakRoom" position="2850,1500" size="100,100">The inside of the fridge is revolting. Whatever it used to contain is no longer food.
+It&#39;s a vending machine with a few items inside. It appears to be turned off.
 
 [[Return to room-&gt;BreakRoom]]
-</tw-passagedata><tw-passagedata pid="21" name="BreakRoomFridgeNote" tags="BreakRoom" position="3000,1350" size="100,100">There&#39;s a note affixed to the fridge.
+</tw-passagedata><tw-passagedata pid="20" name="BreakRoomFridgeInside" tags="BreakRoom" position="2850,1500" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/FridgeInside.png&quot;&gt;
+
+The inside of the fridge is revolting. Whatever it used to contain is no longer food.
+
+[[Return to room-&gt;BreakRoom]]
+</tw-passagedata><tw-passagedata pid="21" name="BreakRoomFridgeNote" tags="BreakRoom" position="3000,1350" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Fridge.png&quot;&gt;
+
+There&#39;s a note affixed to the fridge.
 
 &lt;code&gt;
 To whoever manages the catering and maintainence around here, can we please prioritise restocking of the vending machine - the &lt;b&gt;Karamel Krunch&lt;/b&gt; bars in particular. They help boost employee morale or whatever.
@@ -221,18 +247,26 @@ To whoever manages the catering and maintainence around here, can we please prio
 &lt;/code&gt;
 
 [[Return to room-&gt;BreakRoom]]
-</tw-passagedata><tw-passagedata pid="22" name="BreakRoomTableTake" tags="BreakRoom" position="3000,1200" size="100,100">You take the keys, the label states that they&#39;re for the janitor&#39;s closet.
+</tw-passagedata><tw-passagedata pid="22" name="BreakRoomTableTake" tags="BreakRoom" position="3000,1200" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Table.png&quot;&gt;
 
-[[Return to room-&gt;BreakRoom]]</tw-passagedata><tw-passagedata pid="23" name="FakeExitDoor" tags="" position="2200,1500" size="100,100">It&#39;s a set of exit doors wth crash bars. They are locked with a padlock and chain.
+You take the keys, the label states that they&#39;re for the janitor&#39;s closet.
 
-[[Return to the hallway-&gt;HighHall]]</tw-passagedata><tw-passagedata pid="24" name="LabATerm" tags="LabA" position="2350,500" size="100,100">It&#39;s a computer terminal with something written on the screen.
+[[Return to room-&gt;BreakRoom]]</tw-passagedata><tw-passagedata pid="23" name="FakeExitDoor" tags="" position="2200,1500" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/ExitDoor.png&quot;&gt;
+
+It&#39;s a set of exit doors wth crash bars. They are locked with a padlock and chain.
+
+[[Return to the hallway-&gt;HighHall]]</tw-passagedata><tw-passagedata pid="24" name="LabATerm" tags="LabA" position="2350,500" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Monitor.png&quot;&gt;
+
+It&#39;s a computer terminal with something written on the screen.
 
 [[Return to room-&gt;LabA]]
 
 &lt;code&gt;
 ... It has been noted that a mixture of &lt;em&gt;&lt;b&gt;Ammonia&lt;/b&gt;&lt;/em&gt; and &lt;em&gt;&lt;b&gt;Bleach&lt;/b&gt;&lt;/em&gt; has a severe adverse effect on &lt;em&gt;subject B&lt;/em&gt;. It is recommended that personel handling these substances use personal protective equipment.
 &lt;/code&gt;
-</tw-passagedata><tw-passagedata pid="25" name="LabAArtefact" tags="LabA" position="2500,650" size="100,100">It&#39;s grotesque.
+</tw-passagedata><tw-passagedata pid="25" name="LabAArtefact" tags="LabA" position="2500,650" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/LabASculpture.png&quot;&gt;
+
+It&#39;s grotesque.
 
 [[Return to room-&gt;LabA]]
 </tw-passagedata><tw-passagedata pid="26" name="OfficeDoor" tags="Office" position="2050,650" size="100,100">It&#39;s a wooden door with a keyhole.
@@ -268,13 +302,15 @@ To whoever manages the catering and maintainence around here, can we please prio
 
 The link to the essay is through the developing artstyle of video games as you move through the game - increases in graphical fidelity and colour depth abound.
 
-[[Start-&gt;OpRoomStart]]</tw-passagedata><tw-passagedata pid="31" name="ClosetMaskTake" tags="Closet" position="2550,1800" size="100,100">You pick up the dusty mask.
+[[Start-&gt;OpRoomStart]]</tw-passagedata><tw-passagedata pid="31" name="ClosetMaskTake" tags="Closet" position="2550,1800" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Mask.png&quot;&gt;
+
+You pick up the dusty mask.
 
 [[Return to the closet-&gt;Closet]]
 
 (set: $have_mask to true)
 (set: $took_gas_mask to true)
-</tw-passagedata><tw-passagedata pid="32" name="ClosetChemBox" tags="Closet" position="2700,1800" size="100,100">There&#39;s a bottle of bleach.
+</tw-passagedata><tw-passagedata pid="32" name="ClosetChemBox" tags="Closet" position="2700,1800" size="100,100">&lt;img class=&quot;bgimg&quot; src=&quot;https://raw.githubusercontent.com/Th3T3chn0G1t/Hosting/trunk/ScorpionRenders/Chem.png&quot;&gt;
 
 [[Take the bleach-&gt;Closet]]
 
